@@ -1,0 +1,11 @@
+<%= form_for(@product) do |f| %>
+<%= f.text_field :title, placeholder: "Product title" %>
+<%= f.text_field :short_description, placeholder: "Add short description" %>
+<%= f.text_field :description, placeholder: "Add description" %>
+
+<% if !@product.new_record? %>
+<%= f.text_field :completed, placeholder: "completion status" %>
+<% end %>
+
+<%= f.submit %>
+<% end %>
