@@ -1,0 +1,10 @@
+<ul>
+  <li><%= @product.title %></li>
+  <li><%= @product.short_description %></li>
+  <li><%= @product.description %></li>
+</ul>
+
+<%# <%= link_to "Delete a product", product_path(product), class: "d-block text-decoration-none text-start" %>
+<%= link_to "Delete product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<p><%= link_to "Edit product", edit_product_path(@product.id) %></p>
+<p><%= link_to "Back to products page", products_path %></p>
