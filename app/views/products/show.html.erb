@@ -1,10 +1,23 @@
-<ul>
-  <li><%= @product.title %></li>
-  <li><%= @product.short_description %></li>
-  <li><%= @product.description %></li>
-</ul>
+<div class="show-container">
+<h1><strong><%= @product.title %></strong></h1>
+<h3><%= @product.short_description %></h3>
+<br>
+<p>Description:</p>
+<p><%= @product.description %></p>
+
 
 <%# <%= link_to "Delete a product", product_path(product), class: "d-block text-decoration-none text-start" %>
-<%= link_to "Delete product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %></p>
-<p><%= link_to "Edit product", edit_product_path(@product.id) %></p>
-<p><%= link_to "Back to products page", products_path %></p>
+<div class="d-flex">
+  <div class="btn-ghost">
+    <%= link_to "Edit product", edit_product_path(@product.id), class: "text-decoration-none" %>
+  </div>
+
+  <div class="btn-ghost">
+    <%= link_to "Back to products", products_path, class: "text-decoration-none" %>
+  </div>
+
+  <div class="btn-ghost-delete">
+    <%= link_to "Delete product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" }, class: "text-decoration-none" %>
+  </div>
+</div>
+</div>

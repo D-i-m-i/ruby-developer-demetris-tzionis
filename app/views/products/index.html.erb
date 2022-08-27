@@ -1,10 +1,18 @@
-<h1>Browse the products on sale</h1>
-<ul>
-  <% @products.each do |product| %>
-    <%= link_to product_path(product), class: "text-decoration-none text-black", target: :_blank do %>
-    <li><%= product.title %></li>
-    <% end %>
-  <% end %>
-</ul>
+<div class="index-container">
+  <div class="d-flex justify-content-between">
+  <h1><strong>Browse the products on sale</strong></h1>
 
-<%= link_to "Add a product", new_product_path, class: "d-block text-decoration-none text-start" %>
+  <div class="btn-ghost m0">
+    <%= link_to "Add a product", new_product_path, class: "d-block text-decoration-none" %>
+  </div>
+  </div>
+
+  <div class="cards-products">
+    <% @products.each do |product| %>
+        <%= link_to product_path(product), class: "card-product text-decoration-none text-black" do %>
+          <%= product.title %>
+        <% end %>
+    <% end %>
+  </div>
+
+</div>
