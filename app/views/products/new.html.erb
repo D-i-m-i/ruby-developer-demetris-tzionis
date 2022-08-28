@@ -1,11 +1,9 @@
-<%= form_for(@product) do |f| %>
-<%= f.text_field :title, placeholder: "Product title" %>
-<%= f.text_field :short_description, placeholder: "Add short description" %>
-<%= f.text_field :description, placeholder: "Add description" %>
+<div class="show-container">
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :title, :label => "Product title:", required: false %>
+    <%= f.input :short_description, :label => "Short description:", required: false %>
+    <%= f.input :description, :label => "Description", required: false %>
 
-<% if !@product.new_record? %>
-<%= f.text_field :completed, placeholder: "completion status" %>
-<% end %>
-
-<%= f.submit %>
-<% end %>
+    <%= f.submit "Create product", class: "btn-ghost" %>
+  <% end %>
+</div>

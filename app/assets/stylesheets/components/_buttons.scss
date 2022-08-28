@@ -30,6 +30,23 @@
   margin: 5px 15px 0px 0px;
 }
 
-.btn-ghost:hover {
+.btn-ghost-delete:hover {
+  opacity: 0.7;
+}
+
+.btn-ghost-add-product {
+  color: rgb(0, 0, 0);
+  border: 2px solid #851515;
+  background-color: #ffffff;
+  padding: 5px 0px;
+  width: 180px;
+  height: 40px;
+  font-weight: lighter;
+  opacity: 1.0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.btn-ghost-add-product:hover {
   opacity: 0.7;
 }
