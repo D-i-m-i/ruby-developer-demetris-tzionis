@@ -14,6 +14,10 @@ After forking the repo, you should run the following in your terminal:
 - rails db:seed
 - rails s OR dev (to run the web app on a local server)
 
+-> LOGIN DETAILS
+email: example@country.com
+pass: 123456789
+
 TECH STACK
 - Ruby on Rails 7
 - HTML5 & Flexbox
