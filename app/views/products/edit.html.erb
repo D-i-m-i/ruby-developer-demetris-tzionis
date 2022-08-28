@@ -2,7 +2,7 @@
   <%= simple_form_for(@product) do |f| %>
     <%= f.input :title, :label => "Product title:", required: false %>
     <%= f.input :short_description, :label => "Short description:", required: false %>
-    <%= f.input :description, :label => "Description", required: false %>
+    <%= f.input :description, :label => "Description:", required: false %>
 
     <%= f.submit "Update", class: "btn-ghost" %>
   <% end %>

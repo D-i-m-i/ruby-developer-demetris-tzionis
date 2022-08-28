@@ -2,8 +2,12 @@
   <%= simple_form_for(@product) do |f| %>
     <%= f.input :title, :label => "Product title:", required: false %>
     <%= f.input :short_description, :label => "Short description:", required: false %>
-    <%= f.input :description, :label => "Description", required: false %>
+    <%= f.input :description, :label => "Description:", required: false %>
 
     <%= f.submit "Create product", class: "btn-ghost" %>
   <% end %>
+
+  <div class="btn-ghost">
+      <%= link_to "Back to products", products_path, class: "text-decoration-none" %>
+  </div>
 </div>
