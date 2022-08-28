@@ -1,7 +1,13 @@
-<%= form_for(@product) do |f| %>
-<%= f.text_field :title, placeholder: "Product title" %>
-<%= f.text_field :short_description, placeholder: "Add short description" %>
-<%= f.text_field :description, placeholder: "Add description" %>
+<div class="show-container">
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :title, :label => "Product title:", required: false %>
+    <%= f.input :short_description, :label => "Short description:", required: false %>
+    <%= f.input :description, :label => "Description", required: false %>
 
-<%= f.submit %>
-<% end %>
+    <%= f.submit "Update", class: "btn-ghost" %>
+  <% end %>
+
+  <div class="btn-ghost">
+    <%= link_to "Back to product", product_path(@product), class: "text-decoration-none" %>
+  </div>
+</div>
